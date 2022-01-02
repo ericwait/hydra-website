@@ -1,0 +1,61 @@
+div.box {
+    margin: 2rem 0px;
+}
+div.box-title {
+    background-color: var(--darkgray);
+    margin-bottom: 0px;
+    padding: 0.5rem 1.5rem;
+}
+div.box-title p{
+    color: var(--barelynotwhite);
+    font-size: larger;
+    margin: 0px;
+}
+div.box-content{
+    padding: 0.5rem 2rem;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--darkgray);
+    background-color: var(--lightgray);
+}
+div.aside div.box-title {
+    background-color: #fd964c;
+}
+div.aside div.box-content {
+    background-color: #ffdec6;
+}
+div.extra div.box-title {
+    background-color: #6d81db;
+}
+div.extra div.box-content {
+    background-color: #e4e8fa;
+}
+div.goals div.box-title {
+    background-color: #33c49b;
+}
+div.goals div.box-content {
+    background-color: #b3ebdb;
+}
+div.readme div.box-title {
+    background-color: #a6192e;
+}
+div.readme div.box-content {
+    background-color: #fdd4da;
+}
+
+div.left-border{
+    border-left: 0.25rem solid var(--yellow);
+    padding: 0px 1rem;
+}
+
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+div.gallery img {
+    margin: 0px;
+    padding: 0px;
+}

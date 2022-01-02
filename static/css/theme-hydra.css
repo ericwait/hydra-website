@@ -1,0 +1,210 @@
+:root{
+    --lightred: #e81727;
+    --darkred: #a6192e;
+    --yellow: #FFC72C;
+    --darkerblue: #005EB8;
+    --lighterblue: #6AD1E3;
+    --barelynotwhite: #FAFAFA;
+    --almostwhite: #EFEFEF;
+    --lightgray: #d9d7d7;
+    --mediumgray: #A7A5A5;
+    --darkgray: #585252;
+    --almostblack: #363232;
+    --barelynotblack: #120c0c;
+    --white: #ffffff;
+    --black: #000000;
+    --main-stack: "Roboto", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    --title-stack: "Merriweather", "Times New Roman", Times, serif;
+    
+    --MAIN-TEXT-color: var(--barelynotblack);     /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: var(--almostblack); /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color: var(--lightred);            /* Color of links */
+    --MAIN-LINK-HOVER-color: var(--lightred);     /* Color of hovered links */
+    --MAIN-ANCHOR-color: var(--yellow);               /* Color of anchors on titles */
+
+    --MENU-HEADER-BG-color: var(--darkerblue); /* Background color of menu header */
+    --MENU-HEADER-BORDER-color: var(--darkred); /*Color of menu header border */ 
+
+    --MENU-SEARCH-BG-color: var(--barelynotwhite); /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: var(--almostwhite); /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: var(--almostblack); /* Override search field icons color */
+
+    --MENU-SECTIONS-ACTIVE-BG-color: var(--almostwhite); /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color: var(--barelynotwhite); /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: var(--almostblack); /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: var(--barelynotblack);  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: var(--barelynotblack); /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: var(--yellow); /* Color of background for the active category (only) */
+
+    --MENU-VISITED-color: var(--barelynotwhite); /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: var(--mediumgray); /* Color of <hr> separator in menu */
+    
+}
+
+/* Theme Components */
+
+body {
+    color: var(--MAIN-TEXT-color) !important;
+    background-color: var(--barelynotwhite);
+}
+
+textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+h2, h3, h4, h5 {
+    color: var(--MAIN-TITLES-TEXT-color);
+}
+
+a {
+    color: var(--MAIN-LINK-color);
+}
+
+.anchor {
+    color: var(--MAIN-ANCHOR-color);
+}
+
+a:hover {
+    color: var(--MAIN-LINK-HOVER-color);
+}
+
+#sidebar ul li.visited > a .read-icon {
+	color: var(--MENU-VISITED-color);
+}
+
+#body a.highlight:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    background-color: var(--MAIN-LINK-HOVER-color);
+}
+#sidebar {
+	background-color: var(--MENU-SECTIONS-BG-color);
+    box-shadow: 1px 0px 11px 1px rgba(54,50,50,0.6);
+}
+#sidebar #header-wrapper {
+    background: var(--MENU-HEADER-BG-color);
+    color: var(--MENU-SEARCH-BOX-color);
+    border-color: var(--MENU-HEADER-BORDER-color);
+}
+#sidebar .searchbox {
+	border-color: var(--MENU-SEARCH-BOX-color);
+    background: var(--MENU-SEARCH-BG-color);
+}
+#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
+    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
+}
+#sidebar ul.topics > li > a b {
+    opacity: 0.75;
+}
+#sidebar .searchbox * {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
+}
+
+#sidebar input::placeholder {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
+}
+
+#sidebar a {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
+
+#sidebar a:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+}
+
+#sidebar ul li.active > a {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
+}
+
+#sidebar hr {
+    border-color: var(--MENU-SECTION-HR-color);
+}
+
+#sidebar #shortcuts h3 {
+    font-family: var(--main-stack);
+    font-size: 1.1rem;
+    font-weight: unset;
+    color: var(--darkred);
+    margin-top: 2rem;
+    margin-bottom: 0px;
+}
+
+
+/* Tweaks */
+
+body {
+    font-family: var(--main-stack);
+    text-rendering:  optimizeLegibility;
+}
+h1 {
+    font-family: var(--title-stack);
+    text-transform: none;
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--title-stack);
+    font-weight: bold;
+}
+
+figure {
+    margin: 0px;
+}
+
+figcaption h4 {
+    font-family: var(--main-stack);
+}
+
+svg.logo {
+    width: 8rem;
+}
+
+svg.logo #logo-bgnd{
+    fill: var(--almostblack);
+}
+
+svg.logo #logo-fgnd{
+    fill: var(--barelynotwhite);
+}
+
+h3.logo {
+    font-family: "Audiowide";
+    font-size: 2em;
+    color: var(--almostwhite); 
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+#chapter {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#body-inner {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#chapter p {
+    text-align: left;
+}
+
+@media only all and (max-width: 48em) {
+    svg.logo {
+        width: 6rem;
+    }
+    h3.logo {
+        font-size: 1.5rem;
+    }
+    #sidebar {
+        box-shadow: unset;
+    }
+}

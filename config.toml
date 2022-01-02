@@ -1,4 +1,29 @@
-baseURL = "http://example.org/"
+baseURL = "http://hydraimageprocessor.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Hydra Image Processor"
 theme = "learn"
+
+[outputs]
+    # For search functionality
+    home = [ "HTML", "JSON"]
+
+[params]
+    # Provide a list of custom css files to load relative from the `static/` folder in the site root.
+    custom_css = ['css/shortcode.css']
+
+    # Change default color scheme with a variant one. Can be "red", "blue", "green".
+    themeVariant = "hydra"
+
+    # Author of the site, will be used in meta information
+    author = "Eric Wait"
+
+    # Description of the site, will be used in meta information
+    description = "Informational guide to GPU image processing using the Hydra Image Processor library."
+
+[markup]
+    [markup.highlight]
+    codeFences = false
+
+    [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true
