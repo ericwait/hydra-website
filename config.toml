@@ -1,4 +1,4 @@
-baseURL = "http://hydraimageprocessor.com/"
+baseURL = "https://hydraimageprocessor.com/"
 languageCode = "en-us"
 title = "Hydra Image Processor"
 theme = "learn"
@@ -13,6 +13,7 @@ theme = "learn"
 
     # Change default color scheme with a variant one. Can be "red", "blue", "green".
     themeVariant = "hydra"
+    # themeVariant = "green"
 
     # Author of the site, will be used in meta information
     author = "Eric Wait"
