@@ -7,6 +7,8 @@ theme = "learn"
     # For search functionality
     home = [ "HTML", "JSON"]
 
+createFromSiteMenusMain = true
+
 [params]
     # Provide a list of custom css files to load relative from the `static/` folder in the site root.
     custom_css = ['css/shortcode.css']
@@ -20,6 +22,8 @@ theme = "learn"
 
     # Description of the site, will be used in meta information
     description = "Informational guide to GPU image processing using the Hydra Image Processor library."
+
+    menu = [ "quick-start", "forum"]
 
 [markup]
     [markup.highlight]
